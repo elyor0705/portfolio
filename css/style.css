@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    font-family: "DM Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #171717;
+    color: white;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 28px 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.toggle-menu {
+    display: none;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    background: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.line {
+    display: inline-block;
+    width: 80%;
+    height: 2px;
+    background-color: rgb(134, 134, 134);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.line-1 {
+    top: 5px;
+}
+
+.line-2 {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.line-3 {
+    bottom: 5px;
+}
+
+.navbar-collapse {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.header-content {
+    margin-top: 123px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+}
+
+.header-desc {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #828282;
+    margin-bottom: 35px;
+}
+
+.header-link{
+    display: inline-flex;
+    width: 143px;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+}
+
+.download{
+    background-color: #27AE60;
+    margin-bottom: 12px;
+}
+
+.learn{
+    border: 1px solid white;
+}
+
+.header-media__img{
+    border-radius: 50%;
+    background: rgba(30, 29, 29, 0.2);
+    border: 1px solid #202020;
+    padding: 25px;
+    width: 100%;
+}
+.h1{
+    text-align: center;
+}
+
+.about-title{
+    text-align: center;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 48px;
+    margin-top: 57px;
+}
+
+.about-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+    
+    text-align: center;
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    padding-top: 38px;
+    margin-bottom: 75px;
+}
+
+.desktop-media{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 108px;
+}
+
+.services{
+    margin: 120px 0;
+}
+
+.services-title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 100px;
+}
+
+.services-cards{
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.services-card{
+    
+    flex-grow: 1;
+    flex-basis: 30%;
+    background-color: #212121;
+    padding: 35px 50px;
+    transition: 0.3s ease-in-out;
+     position: relative;
+}
+
+.services-card::after{
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 4px;
+   background-color: #27AE60;
+   bottom: 0;
+   left: 0;
+   transform: scaleX(0);
+   transition: 0.3s;
+   box-shadow: 0 10px 10px #2fba693d;
+}
+.services-card:hover{
+    transform: scale(1.05);
+}
+
+.services-card:hover::after{
+    transform: scaleX(1);
+}
+
+.services-card__title{
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 47px;
+    color: #535353;
+}
+
+.skills-title{
+    text-align: center;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    margin-bottom: 73px;
+}
+
+.skills-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    margin-bottom: 100px;
+    background-color: #333333;
+    padding-top: 59px;
+    padding-bottom: 57px;
+    padding-left:124px ;
+    padding-right: 124px;
+   transition: 0.3s ease-in-out;
+}
+
+.skills-cards:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 0 2px #27AE60;
+}
+
+.skills-card__title{
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 94px;
+    color: #4F4F4F;
+   
+}
+
+.skills-card__desc{
+    font-family: 'DM Sans';
+    color: #27AE60;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+}
+
+.touch{
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    text-align: center;
+    margin-bottom: 82px;
+}
+
+.register{
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    position: relative;
+}
+
+.input-name{
+    
+font-family: 'DM Sans';
+color: #4F4F4F;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+
+    width: 358px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    border: none;border-bottom: 1px solid #4F4F4F;
+    outline: none;
+
+}
+
+.block{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.register-emails{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+   margin-top: 47px;
+  
+}
+
+.register-email__titles{
+    
+    
+     font-family: 'DM Sans';
+    color: #4F4F4F;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px; border: 1px solid #4F4F4F;
+    width: 820px;
+    height: 109px;
+   padding-bottom: 75px;
+   padding-left: 12px;
+    background-color: transparent;
+    outline: none;
+    margin-bottom: ;
+}
+
+.buttonss{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 271px;
+   
+   
+}
+.buttons{
+    background-color: #27AE60;
+    border: none;
+    padding: 12px 32px;
+    transition: 0.3s ease-in-out;
+}
+
+.buttons:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 0 1px #7fdea6;
+}
+
+@media (max-width:870px) {
+    .register-email__titles{
+        width: 365px;
+        height: 109px;
+    }
+    
+}
+
+
+@media (max-width:768px) {
+    .navbar{
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 16px;
+        background-color: #1717179b;
+        backdrop-filter: blur(4px);
+        z-index: 1;
+    }
+
+    .toggle-menu{
+        display: inline-block;
+        z-index: 2;
+    }
+    .navbar-collapse{
+        position: fixed;
+        height: 100vh;
+        background-color: #3434348d;
+        backdrop-filter: blur(4px);
+        width: 300px;
+        right: 0;
+        top: 0;
+        justify-content: flex-start;
+        padding: 20px;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: 0.2s;
+    }
+
+    .navbar-menu{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .header-media__img{
+        margin-top: 65px;
+    }
+    .header-content{
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+    .header-info{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .about-desc{
+        text-align: center;
+    }
+
+    .desktop-media{
+        text-align: center;
+        display: flex;
+        gap: 20px;
+    }
+    .register-emails{
+        position: relative;
+    }
+    .register-email__titles{
+        position: none;
+    }
+}
+
+@media (max-width:580px) {
+    .desktop{
+        margin-top: 80px;
+    }
+    
+}

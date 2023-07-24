@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="logo">Matkarimov</a>
+                <button class="toggle-menu">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+                <div class="navbar-collapse">
+                    <ul class="navbar-menu">
+                        <li class="menu-item">
+                            <a href="#about" class="menu-link">About me</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#services" class="menu-link">Services</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#touch" class="menu-link">Contact me</a>
+                        </li> 
+                    </ul>
+                </div>
+            </nav>
+            <article class="header-content">
+                <div class="header-info">
+                    <h1 class="header-title">Hi, I am <br> Elyor Matkarimov</h1>
+                    <p class="header-desc">Frontend Developer</p>
+                    <a href="" class="header-link download">Download CV</a>
+                    <a href="" class="header-link learn">Learn More</a>
+                </div>
+                <div class="header-media">
+                    <img src="./imges/hero.jpg" alt="" class="header-media__img">
+                </div>
+            </article>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+        <div id="about" class="about">
+            <h2 class="about-title">About</h2>
+            <p class="about-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <br>  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure <br> dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>  Excepteur sint occaecat cupidatat non proident</p>
+        </div>
+        <div class="desktop">
+            <div class="desktop-media">
+                <img src="./imges/name.png" alt="">
+                <img src="./imges/email.png" alt="">
+                <img src="./imges/twitter.png" alt="">
+                <img src="./imges/phone.png" alt="">
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="container">
+        <h3 class="services-title">What i do</h3>
+        <div class="services-cards">
+            <div class="services-card">
+                <img src="./imges/vector-3.png" alt="" class="services-card__img">
+                <h4 class="services-card__title">Software <br> Development</h4>
+            </div>
+                <div class="services-card">
+                    <img src="./imges/vector-2.png" alt="" class="services-card__img">
+                    <h4 class="services-card__title">Web <br>
+                        Development</h4>
+                </div>
+                    <div class="services-card">
+                        <img src="./imges/vector-1.png" alt="" class="services-card__img">
+                        <h4 class="services-card__title">Web <br> Design</h4>
+                    </div>
+           </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h4 class="skills-title">My Skills</h4>
+            <div class="skills-cards">
+                <div class="skills-card">
+                    <h5 class="skills-card__title">50%</h5>
+                    <h6 class="skills-card__desc">HTML</h6>
+                </div>
+                <div class="skilla-card">
+                    <h5 class="skills-card__title">20%</h5>
+                    <h6 class="skills-card__desc">CSS</h6>
+                </div>
+                <div class="skilla-card">
+                    <h5 class="skills-card__title">10%</h5>
+                    <h6 class="skills-card__desc">JAVASCRIPT</h6>
+                </div>
+                <div class="skilla-card">
+                    <h5 class="skills-card__title">2%</h5>
+                    <h6 class="skills-card__desc">PHP</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h1 id="touch" class="touch">Get in touch</h1>
+            <div class="register">
+                <div class="register-email">
+                   <input class="input-name" type="text" placeholder="Name">
+                </div>
+                <div class="register-email">
+                    <input class="input-name" type="text" placeholder=" Last Name">
+                </div>
+                </div>
+                <div class="block">
+                <div class="register-email">
+                    <input class="input-name" type="text" placeholder="Email">
+                </div>
+                <div class="register-email">
+                    <input class="input-name" type="text" placeholder="Phone Number">
+                </div>
+                </div>
+                <div class="register-emails">
+                    <input class="register-email__titles" type="text" placeholder="Message">
+                </div>
+                <div class="buttonss">
+               <button class="buttons">Sumbit now</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-menu')
+        const navbarCollapse = document.querySelector('.navbar-collapse')
+        const navLinks = document.querySelectorAll('.menu-link')
+
+        function toggleMenu(){
+            if(navbarCollapse.style.transform === 'translateX(0px)'){
+                navbarCollapse.style.transform = 'translateX(100%)'
+            }else {
+                navbarCollapse.style.transform = 'translateX(0)'
+            }
+        }
+        
+        toggleBtn.onclick = toggleMenu
+        navLinks.forEach(function (link) {
+            link.onclick = function () {
+                const isMobile = window.matchMedia('(max-width: 768px)')
+                if(isMobile.matches === true){
+                    toggleMenu()
+                }
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
